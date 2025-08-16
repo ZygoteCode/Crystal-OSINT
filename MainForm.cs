@@ -171,7 +171,9 @@ public partial class MainForm : MetroForm
                 result += _osintDogManager.IntelVaultSearch(username, "username") + ",";
                 result += _osintDogManager.LeakCheckSearch(username, "username") + ",";
                 result += _osintDogManager.LeakSightSearch(username, "username") + ",";
-                result += _osintDogManager.SnusbaseSearch(username, "username");
+                result += _osintDogManager.SnusbaseSearch(username, "username") + ",";
+                result += _osintDogManager.OsintCatLookup(username, "breach") + ",";
+                result += _osintDogManager.OsintCatLookup(username, "discord");
                 result += "]";
                 result = result.Replace("Lookup made by https://osintdog.com", "Lookup made by Crystal OSINT");
 
@@ -260,7 +262,10 @@ public partial class MainForm : MetroForm
                 result += _osintDogManager.AkulaSearch(email, "email") + ",";
                 result += _osintDogManager.OathNetGHuntEmailSearch(email) + ",";
                 result += _osintDogManager.OathNetHoleleEmailSearch(email) + ",";
-                result += _osintDogManager.SEONEmailSearch(email);
+                result += _osintDogManager.SEONEmailSearch(email) + ",";
+                result += _osintDogManager.OsintCatLookup(email, "breach") + ",";
+                result += _osintDogManager.OsintCatLookup(email, "email-osint") + ",";
+                result += _osintDogManager.OsintCatLookup(email, "github-osint");
                 result += "]";
                 result = result.Replace("Lookup made by https://osintdog.com", "Lookup made by Crystal OSINT");
 
@@ -344,7 +349,8 @@ public partial class MainForm : MetroForm
                 result += _osintDogManager.LeakCheckSearch(domain, "domain") + ",";
                 result += _osintDogManager.Inf0SecSearch(domain, "domain") + ",";
                 result += _osintDogManager.AkulaSearch(domain, "domain") + ",";
-                result += _osintDogManager.HackCheckSearch(domain, "domain");
+                result += _osintDogManager.HackCheckSearch(domain, "domain") + ",";
+                result += _osintDogManager.OsintCatLookup(domain, "domain");
                 result += "]";
                 result = result.Replace("Lookup made by https://osintdog.com", "Lookup made by Crystal OSINT");
 
@@ -426,7 +432,8 @@ public partial class MainForm : MetroForm
                 string result = "[";
                 result += _osintDogManager.HackCheckSearch(ip, "ip_address") + ",";
                 result += _osintDogManager.Inf0SecSearch(ip, "leaks") + ",";
-                result += _osintDogManager.SnusbaseSearch(ip, "lastip");
+                result += _osintDogManager.SnusbaseSearch(ip, "lastip") + ",";
+                result += _osintDogManager.OsintCatLookup(ip, "breach");
                 result += "]";
                 result = result.Replace("Lookup made by https://osintdog.com", "Lookup made by Crystal OSINT");
 
@@ -509,7 +516,9 @@ public partial class MainForm : MetroForm
                 result += _osintDogManager.LeakCheckSearch(phone, "phone") + ",";
                 result += _osintDogManager.HackCheckSearch(phone, "phone_number") + ",";
                 result += _osintDogManager.Inf0SecSearch(phone, "leaks") + ",";
-                result += _osintDogManager.SEONPhoneSearch(phone);
+                result += _osintDogManager.SEONPhoneSearch(phone) + ",";
+                result += _osintDogManager.OsintCatLookup(phone, "breach") + ",";
+                result += _osintDogManager.OsintCatLookup(phone, "phone-osint");
                 result += "]";
                 result = result.Replace("Lookup made by https://osintdog.com", "Lookup made by Crystal OSINT");
 
@@ -590,7 +599,8 @@ public partial class MainForm : MetroForm
             {
                 string result = "[";
                 result += _osintDogManager.Inf0SecSearch(discordId, "discord") + ",";
-                result += _osintDogManager.Inf0SecSearch(discordId, "leaks");
+                result += _osintDogManager.Inf0SecSearch(discordId, "leaks") + ",";
+                result += _osintDogManager.OsintCatLookup(discordId, "discord");
                 result += "]";
                 result = result.Replace("Lookup made by https://osintdog.com", "Lookup made by Crystal OSINT");
 
@@ -673,7 +683,8 @@ public partial class MainForm : MetroForm
                 result += _osintDogManager.SnusbaseSearch(hash, "domain") + ",";
                 result += _osintDogManager.LeakCheckSearch(hash, "hash") + ",";
                 result += _osintDogManager.HackCheckSearch(hash, "hash") + ",";
-                result += _osintDogManager.Inf0SecSearch(hash, "leaks");
+                result += _osintDogManager.Inf0SecSearch(hash, "leaks") + ",";
+                result += _osintDogManager.OsintCatLookup(hash, "breach");
                 result += "]";
                 result = result.Replace("Lookup made by https://osintdog.com", "Lookup made by Crystal OSINT");
 
@@ -754,7 +765,8 @@ public partial class MainForm : MetroForm
             {
                 string result = "[";
                 result += _osintDogManager.HackCheckSearch(fullName, "full_name") + ",";
-                result += _osintDogManager.Inf0SecSearch(fullName, "leaks");
+                result += _osintDogManager.Inf0SecSearch(fullName, "leaks") + ",";
+                result += _osintDogManager.OsintCatLookup(fullName, "breach");
                 result += "]";
                 result = result.Replace("Lookup made by https://osintdog.com", "Lookup made by Crystal OSINT");
 

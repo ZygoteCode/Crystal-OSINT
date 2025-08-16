@@ -6,25 +6,43 @@ using System.Text;
 
 public class OSINTDogManager
 {
-    private HttpClient _httpClient;
+    private HttpClient _osintDogHttpClient, _osintCatHttpClient;
+    private string _osintCatApiKey;
 
     public OSINTDogManager()
     {
-        _httpClient = new HttpClient();
+        _osintDogHttpClient = new HttpClient();
+        _osintDogHttpClient.DefaultRequestHeaders.Add("X-API-Key", File.ReadAllText("API_KEY_OSINTDOG.txt"));
+        _osintDogHttpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-        _httpClient.DefaultRequestHeaders.Add("X-API-Key", File.ReadAllText("API_KEY.txt"));
-        _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        _osintCatApiKey = File.ReadAllText("API_KEY_OSINTCAT.txt");
+
+        _osintCatHttpClient = new HttpClient();
+        _osintCatHttpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0");
+    }
+
+    public string OsintCatLookup(string query, string searchType)
+    {
+        try
+        {
+            HttpResponseMessage response = _osintCatHttpClient.GetAsync($"https://osintcat.ru/api/{searchType}?id={_osintCatApiKey}&query={Uri.EscapeDataString(query)}").Result;
+            return response.Content.ReadAsStringAsync().Result.Replace("osintcat.ru", "Crystal OSINT");
+        }
+        catch
+        {
+            return "";
+        }
     }
 
     public string SnusbaseSearch(string query, string searchType)
     {
-        //  email, username, lastip, hash, password, name, _domain
+        // email, username, lastip, hash, password, name, _domain
         string json = "{\"terms\": [\"" + query + "\"], \"types\": [\"" + searchType + "\"], \"wildcard\": false, \"group_by\": \"db\", \"tables\": null}";
         var content = new StringContent(json, Encoding.UTF8, "application/json");
 
         try
         {
-            HttpResponseMessage response = _httpClient.PostAsync("https://osintdog.com/api/snusbase/search", content).Result;
+            HttpResponseMessage response = _osintDogHttpClient.PostAsync("https://osintdog.com/api/snusbase/search", content).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -41,7 +59,7 @@ public class OSINTDogManager
 
         try
         {
-            HttpResponseMessage response = _httpClient.PostAsync("https://osintdog.com/api/leakcheck/v2", content).Result;
+            HttpResponseMessage response = _osintDogHttpClient.PostAsync("https://osintdog.com/api/leakcheck/v2", content).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -58,7 +76,7 @@ public class OSINTDogManager
 
         try
         {
-            HttpResponseMessage response = _httpClient.PostAsync("https://osintdog.com/api/hackcheck", content).Result;
+            HttpResponseMessage response = _osintDogHttpClient.PostAsync("https://osintdog.com/api/hackcheck", content).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -75,7 +93,7 @@ public class OSINTDogManager
 
         try
         {
-            HttpResponseMessage response = _httpClient.PostAsync("https://osintdog.com/api/breachbase", content).Result;
+            HttpResponseMessage response = _osintDogHttpClient.PostAsync("https://osintdog.com/api/breachbase", content).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -92,7 +110,7 @@ public class OSINTDogManager
 
         try
         {
-            HttpResponseMessage response = _httpClient.PostAsync("https://osintdog.com/api/intelvault", content).Result;
+            HttpResponseMessage response = _osintDogHttpClient.PostAsync("https://osintdog.com/api/intelvault", content).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -106,7 +124,7 @@ public class OSINTDogManager
         // leaks, discord, npd, domain, username, hlr, cfx
         try
         {
-            HttpResponseMessage response = _httpClient.GetAsync("https://osintdog.com/api/inf0sec/" + searchType + "?q=" + Uri.EscapeDataString(query)).Result;
+            HttpResponseMessage response = _osintDogHttpClient.GetAsync("https://osintdog.com/api/inf0sec/" + searchType + "?q=" + Uri.EscapeDataString(query)).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -124,7 +142,7 @@ public class OSINTDogManager
 
         try
         {
-            HttpResponseMessage response = _httpClient.PostAsync("https://osintdog.com/api/akula", content).Result;
+            HttpResponseMessage response = _osintDogHttpClient.PostAsync("https://osintdog.com/api/akula", content).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -141,7 +159,7 @@ public class OSINTDogManager
 
         try
         {
-            HttpResponseMessage response = _httpClient.PostAsync("https://osintdog.com/api/leaksight", content).Result;
+            HttpResponseMessage response = _osintDogHttpClient.PostAsync("https://osintdog.com/api/leaksight", content).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -154,7 +172,7 @@ public class OSINTDogManager
     {
         try
         {
-            HttpResponseMessage response = _httpClient.GetAsync("https://osintdog.com/api/oathnet/holehe?email=" + Uri.EscapeDataString(query)).Result;
+            HttpResponseMessage response = _osintDogHttpClient.GetAsync("https://osintdog.com/api/oathnet/holehe?email=" + Uri.EscapeDataString(query)).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -167,7 +185,7 @@ public class OSINTDogManager
     {
         try
         {
-            HttpResponseMessage response = _httpClient.GetAsync("https://osintdog.com/api/oathnet/ghunt?email=" + Uri.EscapeDataString(query)).Result;
+            HttpResponseMessage response = _osintDogHttpClient.GetAsync("https://osintdog.com/api/oathnet/ghunt?email=" + Uri.EscapeDataString(query)).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -180,7 +198,7 @@ public class OSINTDogManager
     {
         try
         {
-            HttpResponseMessage response = _httpClient.GetAsync("https://osintdog.com/api/seon/email?email=" + Uri.EscapeDataString(query)).Result;
+            HttpResponseMessage response = _osintDogHttpClient.GetAsync("https://osintdog.com/api/seon/email?email=" + Uri.EscapeDataString(query)).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
@@ -193,7 +211,7 @@ public class OSINTDogManager
     {
         try
         {
-            HttpResponseMessage response = _httpClient.GetAsync("https://osintdog.com/api/seon/phone?phone=" + Uri.EscapeDataString(query)).Result;
+            HttpResponseMessage response = _osintDogHttpClient.GetAsync("https://osintdog.com/api/seon/phone?phone=" + Uri.EscapeDataString(query)).Result;
             return response.Content.ReadAsStringAsync().Result;
         }
         catch
