@@ -43,10 +43,10 @@
       <HintPath>packages\Costura.Fody.6.0.0\lib\netstandard2.0\Costura.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\..\AMD\CSharpBeautifulThemes\Libraries\Guna.UI2\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\DLLs\CSharpBeautifulThemes\Libraries\Guna.UI2\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="MetroSuite 2.0">
-      <HintPath>..\..\..\..\..\AMD\CSharpBeautifulThemes\Libraries\MetroSuite\MetroSuite 2.0.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\DLLs\CSharpBeautifulThemes\Libraries\MetroSuite\MetroSuite 2.0.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

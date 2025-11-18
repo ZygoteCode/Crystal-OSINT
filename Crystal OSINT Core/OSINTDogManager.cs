@@ -12,10 +12,10 @@ public class OSINTDogManager
     public OSINTDogManager()
     {
         _osintDogHttpClient = new HttpClient();
-        _osintDogHttpClient.DefaultRequestHeaders.Add("X-API-Key", File.ReadAllText("API_KEY_OSINTDOG.txt"));
+        //_osintDogHttpClient.DefaultRequestHeaders.Add("X-API-Key", File.ReadAllText("API_KEY_OSINTDOG.txt"));
         _osintDogHttpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-        _osintCatApiKey = File.ReadAllText("API_KEY_OSINTCAT.txt");
+        //_osintCatApiKey = File.ReadAllText("API_KEY_OSINTCAT.txt");
 
         _osintCatHttpClient = new HttpClient();
         _osintCatHttpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0");

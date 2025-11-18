@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\exile\\Desktop\\GitHub Repositories\\Crystal-OSINT\\",
+  "WorkspaceRootPath": "C:\\Users\\nmjuk\\Desktop\\Computer\\GitHub Repositories\\Crystal-OSINT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2BE5022A-2CED-425F-A805-8CDF9CE3B03C}|Crystal OSINT.csproj|c:\\users\\exile\\desktop\\github repositories\\crystal-osint\\crystal osint core\\osintdogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2BE5022A-2CED-425F-A805-8CDF9CE3B03C}|Crystal OSINT.csproj|C:\\Users\\nmjuk\\Desktop\\Computer\\GitHub Repositories\\Crystal-OSINT\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2BE5022A-2CED-425F-A805-8CDF9CE3B03C}|Crystal OSINT.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE5022A-2CED-425F-A805-8CDF9CE3B03C}|Crystal OSINT.csproj|c:\\users\\nmjuk\\desktop\\computer\\github repositories\\crystal-osint\\crystal osint core\\osintdogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BE5022A-2CED-425F-A805-8CDF9CE3B03C}|Crystal OSINT.csproj|solutionrelative:crystal osint core\\osintdogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BE5022A-2CED-425F-A805-8CDF9CE3B03C}|Crystal OSINT.csproj|c:\\users\\exile\\desktop\\github repositories\\crystal-osint\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2BE5022A-2CED-425F-A805-8CDF9CE3B03C}|Crystal OSINT.csproj|C:\\Users\\nmjuk\\Desktop\\Computer\\GitHub Repositories\\Crystal-OSINT\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BE5022A-2CED-425F-A805-8CDF9CE3B03C}|Crystal OSINT.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BE5022A-2CED-425F-A805-8CDF9CE3B03C}|Crystal OSINT.csproj|c:\\users\\exile\\desktop\\github repositories\\crystal-osint\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2BE5022A-2CED-425F-A805-8CDF9CE3B03C}|Crystal OSINT.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +22,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\exile\\Desktop\\GitHub Repositories\\Crystal-OSINT\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\nmjuk\\Desktop\\Computer\\GitHub Repositories\\Crystal-OSINT\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\exile\\Desktop\\GitHub Repositories\\Crystal-OSINT\\MainForm.cs",
+              "ToolTip": "C:\\Users\\nmjuk\\Desktop\\Computer\\GitHub Repositories\\Crystal-OSINT\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
               "ViewState": "AgIAADgCAAAAAAAAAADgv64CAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -39,11 +39,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\exile\\Desktop\\GitHub Repositories\\Crystal-OSINT\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\nmjuk\\Desktop\\Computer\\GitHub Repositories\\Crystal-OSINT\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\exile\\Desktop\\GitHub Repositories\\Crystal-OSINT\\MainForm.cs [Progettazione]",
+              "ToolTip": "C:\\Users\\nmjuk\\Desktop\\Computer\\GitHub Repositories\\Crystal-OSINT\\MainForm.cs [Progettazione]",
               "RelativeToolTip": "MainForm.cs [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-16T12:23:28.798Z",
@@ -51,13 +51,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "OSINTDogManager.cs",
-              "DocumentMoniker": "C:\\Users\\exile\\Desktop\\GitHub Repositories\\Crystal-OSINT\\Crystal OSINT Core\\OSINTDogManager.cs",
+              "DocumentMoniker": "C:\\Users\\nmjuk\\Desktop\\Computer\\GitHub Repositories\\Crystal-OSINT\\Crystal OSINT Core\\OSINTDogManager.cs",
               "RelativeDocumentMoniker": "Crystal OSINT Core\\OSINTDogManager.cs",
-              "ToolTip": "C:\\Users\\exile\\Desktop\\GitHub Repositories\\Crystal-OSINT\\Crystal OSINT Core\\OSINTDogManager.cs",
+              "ToolTip": "C:\\Users\\nmjuk\\Desktop\\Computer\\GitHub Repositories\\Crystal-OSINT\\Crystal OSINT Core\\OSINTDogManager.cs",
               "RelativeToolTip": "Crystal OSINT Core\\OSINTDogManager.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-09T23:18:20.662Z",
               "EditorCaption": ""
